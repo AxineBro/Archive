@@ -1,4 +1,4 @@
-[Back] (../E1S1C.md)
+[Back](../E1S1C.md)
 
 ![](Photo1.jpg)
 ![](Photo2.jpg)
