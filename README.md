@@ -8,4 +8,4 @@ How are the works presented?
 ********************************************************************************
 Exam Selection
 ********************************************************************************
-+[Введение в программирование (Introduction to programming)](Exam1Semester1Сourse(ВВП)/E1S1C.md)
+[Введение в программирование (Introduction to programming)](Exam1Semester1Сourse(ВВП)/E1S1C.md)

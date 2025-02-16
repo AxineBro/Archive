@@ -1,4 +1,5 @@
-<h2>Select an action</h2>
+<h2>Selected "Введение в программирование (Introduction to programming)"</h2>
+Select an action
 
 [Back](../README.md)
 
