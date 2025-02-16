@@ -1,0 +1,1 @@
+This project contains archives of completed tasks. Tasks are not the only correct solution or the most optimal one. This file was created for informational purposes and to help you prepare for the exam. The author is not responsible for the correctness of the program
