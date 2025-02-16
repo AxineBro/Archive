@@ -1,0 +1,28 @@
+public static int task5(int[] arr) {
+    	if(arr.length == 1)
+    		 return -1;
+    	int max = arr[0];
+    	int counter = 0;
+    	int counterDat = 0;
+    	boolean сompleteСhain = false;
+    	for(int i = 1; i < arr.length; i++) {
+    		if(arr[i] < max) {
+    			counter++;
+    		} else if(arr[i] == max) {
+    			if(counterDat < counter) {
+    				counterDat = counter;
+    			}
+    			сompleteСhain = true;
+    			counter = 0;
+    		} else {
+    			max = arr[i];
+    			сompleteСhain = false;
+    			counter = 0;
+    			counterDat = 0;
+    		}
+    	}
+    	if(сompleteСhain) {
+    		return counterDat;
+    	}
+        return -1;
+    }
