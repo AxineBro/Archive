@@ -1,0 +1,30 @@
+public static List<Integer> task9(List<Integer> list) {
+        List<Integer> result = new ArrayList<>();
+        int currentMax = Integer.MIN_VALUE;
+        boolean inSequence = false;
+
+        for (int value : list) {
+            if (value != 0) {
+                if (!inSequence) {
+                    inSequence = true;
+                    currentMax = value;
+                } else {
+                    if (value > currentMax) {
+                        currentMax = value;
+                    }
+                }
+            } else {
+                if (inSequence) {
+                    result.add(currentMax);
+                    inSequence = false;
+                    currentMax = Integer.MIN_VALUE;
+                }
+            }
+        }
+        
+        if (inSequence) {
+            result.add(currentMax);
+        }
+
+        return result;
+    }

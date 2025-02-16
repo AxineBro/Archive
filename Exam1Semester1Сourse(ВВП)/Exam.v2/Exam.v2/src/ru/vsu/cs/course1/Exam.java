@@ -22,10 +22,23 @@ public class Exam {
     public static void task4(int h, int w) {
         return;
     }
-
-    public static int task5(int[] arr) {
+    public static int task5(int[] array) {
+        for (int i = array.length - 1; i >= 0; i--) {
+            int count = 0;
+            for (int j = 0; j < array.length; j++) {
+                if (array[j] < array[i]) {
+                    count++;
+                    if (count >= 3) {
+                        return i;
+                    }
+                }
+            }
+        }
         return -1;
     }
+    /*public static int task5(int[] arr) {
+        return -1;
+    }*/
     
     public static int task6(int[][] arr) {
         return -1;
