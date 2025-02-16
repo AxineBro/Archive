@@ -1,5 +1,6 @@
 <h2>Select an action</h2>
-[Back](../README.md)
+
+[Back](../../README.md)
 
 ********************************************************************************
 + [View tasks](Photo/E1S1CPhoto.md)
