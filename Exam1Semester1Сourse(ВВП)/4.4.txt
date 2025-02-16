@@ -1,0 +1,33 @@
+private static boolean isStar(int h, int w, int i, int j) {
+    	return i == 0 && j == 0 || i == h-1 && j == 0 || i == 0 && j == w-1 || i == h-1 && j == w-1; 
+    }
+    private static boolean isFrameV(int h, int w, int i, int j) {
+    	return j == 0 || j == w-1;
+    }
+    private static boolean isFrameH(int h, int w, int i, int j) {
+    	return i == h-1 || i ==0;
+    }
+    public static void task4(int h, int w) {
+    	boolean isPlus = true;
+    	for(int i = 0; i < h; i++) {
+    		for(int j = 0; j < w; j++) {
+    			if(isStar(h, w, i, j)) {
+    				System.out.print('*');
+    			} else if(isFrameV(h, w, i, j)) {
+    				System.out.print('|');
+    			} else if(isFrameH(h, w, i, j)) {
+    				System.out.print('-');
+    			} else {
+    				if(isPlus) {
+    					isPlus = false;
+    					System.out.print('+');
+    				} else {
+    					isPlus = true;
+    					System.out.print('-');
+    				}
+    			}
+    		}
+    		System.out.println();
+    	}
+        return;
+    }

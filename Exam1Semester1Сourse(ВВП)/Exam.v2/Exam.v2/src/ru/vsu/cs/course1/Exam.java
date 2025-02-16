@@ -27,7 +27,7 @@ public class Exam {
         return -1;
     }
     
-    public static int task6(int[][] matrix) {
+    public static int task6(int[][] arr) {
         return -1;
     }
 

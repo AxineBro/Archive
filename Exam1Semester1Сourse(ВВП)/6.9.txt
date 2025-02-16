@@ -1,0 +1,36 @@
+public static int countInRows(int[][] matrix, int rowIndex, int value) {
+        int count = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            if (i != rowIndex && containsValue(matrix[i], value)) {
+                count++;
+                if (count >= 2) {
+                    break;
+                }
+            }
+        }
+        return count;
+    }
+
+    public static boolean containsValue(int[] row, int value) {
+        for (int element : row) {
+            if (element == value) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public static int task6(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            boolean allCommon = true;
+            for (int j = 0; j < arr[i].length; j++) {
+                if (countInRows(arr, i, arr[i][j]) < 2) {
+                	allCommon = false;
+                    break;
+                }
+            }
+            if (allCommon) {
+                return i;
+            }
+        }
+        return -1;
+    }

@@ -1,0 +1,19 @@
+public static void task8(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+        	int count = i/2;
+        	int countDat = 0;
+        	int currentCounter = 0;
+        	for (int j = 0; j < arr[0].length; j++) {
+            	arr[i][j] = count;
+            	currentCounter++;
+            	if(currentCounter == 2 && countDat == count) {
+            		countDat++;
+            		count++;
+            		currentCounter = 0;
+            	} else if(currentCounter == 2 ) {
+            		countDat++;
+            		currentCounter = 0;
+            	}
+            }
+        }
+    }
