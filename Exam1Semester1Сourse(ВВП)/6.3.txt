@@ -1,0 +1,22 @@
+public static int countUniqueValues(int[][] matrix, int col) {
+        Set<Integer> uniqueValues = new HashSet<>();
+        
+        for (int row = 0; row < matrix.length; row++) {
+            uniqueValues.add(matrix[row][col]);
+        }
+        return uniqueValues.size();
+    }
+    
+    public static int task6(int[][] matrix) {
+        int maxUniqueCount = 0;
+        int columnIndex = 0;
+
+        for (int col = 0; col < matrix[0].length; col++) {
+            int uniqueCount = countUniqueValues(matrix, col);
+            if (uniqueCount > maxUniqueCount) {
+                maxUniqueCount = uniqueCount;
+                columnIndex = col;
+            }
+        }
+        return columnIndex;
+    }
