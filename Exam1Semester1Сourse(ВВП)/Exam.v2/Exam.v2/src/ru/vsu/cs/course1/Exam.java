@@ -6,7 +6,7 @@ import java.util.*;
  * Класс для реализации задач
  */
 public class Exam {
-
+	
     public static void task1(int n) {
         return;
     }
