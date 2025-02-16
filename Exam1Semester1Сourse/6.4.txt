@@ -1,0 +1,27 @@
+private static boolean indexOf(int indexString, int num, int[][] arrs){
+        for(int i = 0; i < arrs.length; i++){
+            if(i == indexString) continue;
+            for (int j = 0; j < arrs[i].length; j++){
+                if(arrs[i][j] == num){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    private static boolean isUnique(int indexString, int[][] arrs){
+        for(int i = 0; i < arrs[indexString].length; i++) {
+            if(!indexOf(indexString, arrs[indexString][i], arrs)){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static int task6(int[][] arr) {
+        for(int i = 0; i < arr.length; i++){
+            if(isUnique(i, arr)){
+                return i;
+            }
+        }
+        return -1;
+    }

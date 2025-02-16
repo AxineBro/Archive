@@ -1,0 +1,21 @@
+private static boolean isFulfillsCondition(int[] arr, int num){
+        for (int i = 0; i < arr.length; i++){
+            if(Math.abs(arr[i] - num) <= 2 && arr[i] != num){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static int task5(int[] arr) {
+        int sum = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(isFulfillsCondition(arr, arr[i])){
+                sum += arr[i];
+            }
+        }
+        if(sum == 0) {
+            return -1;
+        }else{
+            return sum;
+        }
+    }

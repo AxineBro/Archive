@@ -1,0 +1,13 @@
+public static List<Integer> task9(List<Integer> list) {
+        List<Integer> resultList = new ArrayList<>();
+        int counter = 0;
+        int powerTwo = 1;
+        for(int value :  list){
+            resultList.add(value);
+            if(counter++ == powerTwo){
+                resultList.add(value);
+                powerTwo *= 2;
+            }
+        }
+        return resultList;
+    }

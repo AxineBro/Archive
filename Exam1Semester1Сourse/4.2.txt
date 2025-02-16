@@ -1,0 +1,33 @@
+private static boolean isStar(int i, int j, int h, int w){
+        return (i == 0 && j ==0) || (i == h-1 && j ==0) || (i == 0 && j ==w-1) || (i == h-1 && j ==w-1);
+    }
+    private static boolean isHorizontalLine(int i, int j, int h, int w){
+        return i == 0 || i == h-1 ;
+    }
+    private static boolean isVerticalLine(int i, int j, int h, int w){
+        return j ==0 || j ==w-1;
+    }
+    public static void task4(int h, int w) {
+        for(int i = 0; i < h; i++){
+            for(int j = 0; j < w; j++) {
+                if(isStar(i, j, h, w)){
+                    System.out.print('*');
+                } else if (isHorizontalLine(i, j, h, w)) {
+                    System.out.print('-');
+                }
+                else if (isVerticalLine(i, j, h, w)) {
+                    System.out.print('|');
+                }
+                else{
+                    if(i % 2 != 0) {
+                        System.out.print('\\');
+                    }
+                    else{
+                        System.out.print('/');
+                    }
+                }
+            }
+            System.out.println();
+        }
+        return;
+    }

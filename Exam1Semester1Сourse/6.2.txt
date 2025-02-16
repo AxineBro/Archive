@@ -1,0 +1,21 @@
+private static boolean isEvenString(int[] arr){
+        for(int num : arr){
+            if(num % 2 != 0){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static int task6(int[][] arr) {
+        int counter = 0;
+        for(int[] arrs : arr){
+            if(isEvenString(arrs)){
+                counter++;
+            }
+        }
+        if (counter == 0) {
+            return -1;
+        } else {
+            return counter;
+        }
+    }

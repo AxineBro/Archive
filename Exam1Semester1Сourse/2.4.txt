@@ -1,0 +1,27 @@
+private static boolean hasRepeatingDigits(int number) {
+        String numberStr = String.valueOf(number);
+        for (int i = 0; i < numberStr.length(); i++) {
+            for (int j = i + 1; j < numberStr.length(); j++) {
+                if (numberStr.charAt(i) == numberStr.charAt(j)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public static void task2(int n) {
+        int counter = 0;
+        int number = 11;
+
+        while (counter < n) {
+            if (hasRepeatingDigits(number)) {
+                System.out.print(number);
+                counter++;
+                if(counter < n){
+                    System.out.print(", ");
+                }
+            }
+            number++;
+        }
+        return;
+    }

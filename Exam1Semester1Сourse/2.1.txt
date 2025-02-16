@@ -1,0 +1,15 @@
+public static void task2(int n) {
+        int counter = 1;
+        int tempNum = 2;
+        System.out.print(tempNum);
+        if (counter != n) System.out.print(", ");
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < i; j++){
+                counter++;
+                tempNum+=i;
+                System.out.print(tempNum);
+                if (counter != n) System.out.print(", ");
+                if(counter == n) return;
+            }
+        }
+    }

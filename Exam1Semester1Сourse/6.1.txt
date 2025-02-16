@@ -1,0 +1,38 @@
+private static boolean isMonotonouslyIncreasing(int num){
+        String str = String.valueOf(num);
+        for(int i = 0; i < str.length()-1; i++){
+            if(str.charAt(i) >= str.charAt(i+1)){
+                return false;
+            }
+        }
+        return true;
+    }
+    private static boolean isSatisfiesCondition(int[] arr){
+        for(int num : arr){
+          if(!isMonotonouslyIncreasing(num)){
+              return false;
+          }
+        }
+        return true;
+    }
+    private static int[] getColum(int[][] arr, int indexColum){
+        int[] colum = new int[arr.length];
+        for(int i = 0; i < arr.length; i++){
+            colum[i] = arr[i][indexColum];
+        }
+        return  colum;
+    }
+    public static int task6(int[][] arr) {
+        int counter = 0;
+        for (int i = 0; i < arr[0].length; i++){
+            if(isSatisfiesCondition(getColum(arr, i))){
+            System.out.print(i);
+                counter++;
+            }
+        }
+        if(counter == 0) {
+            return -1;
+        }else {
+            return counter;
+        }
+    }

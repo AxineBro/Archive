@@ -1,0 +1,31 @@
+public static void task1(int n) {
+        int counter = 0;
+        f:for(int i = 0; i < n; i++){
+            char ch = (char) ('a' + counter++ % 4);
+            System.out.print(ch);
+            for(int j = 0; j < 3; j++){
+                i++;
+                switch (ch++) {
+                    case 'a':
+                        System.out.print('b');
+                        break;
+                    case 'b':
+                        System.out.print('c');
+                        break;
+                    case 'c':
+                        System.out.print('d');
+                        break;
+                    case 'd':
+                        System.out.print('a');
+                        break;
+                }
+                if(ch > 'd') {
+                    ch = 'a';
+                }
+                if(i == n) {
+                    break f;
+                }
+            }
+        }
+        return;
+    }

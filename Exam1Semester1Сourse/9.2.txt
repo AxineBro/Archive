@@ -1,0 +1,19 @@
+ public static List<Integer> task9(List<Integer> list) {
+        List<Integer> listResult = new ArrayList<>();
+        int dataNum = Integer.MAX_VALUE;
+        boolean isReduce = false;
+        for(int value : list){
+            if(value >= dataNum && !isReduce){
+                dataNum = value;
+                listResult.add(value);
+            } else if (value >= dataNum && isReduce) {
+                dataNum = value;
+                isReduce = false;
+                listResult.add(value);
+            } else if(value < dataNum){
+                dataNum = value;
+                isReduce = true;
+            }
+        }
+        return listResult;
+    }

@@ -1,0 +1,19 @@
+public static void task8(int[][] arr) {
+        for(int i = 0; i < arr.length; i++){
+            boolean isNull = false;
+            int counter = i+1;
+            for(int j = 0; j < arr[i].length; j++){
+                if(isNull){
+                    counter++;
+                }
+                else {
+                    counter--;
+                }
+                arr[arr.length - 1 - i][arr[i].length - 1 - j] = counter;
+                if(counter == 0){
+                    isNull = true;
+                }
+            }
+        }
+        return;
+    }

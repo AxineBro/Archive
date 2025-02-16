@@ -1,0 +1,23 @@
+public static void task1(int n) {
+        int counter = 0;
+        char ch = 'a';
+        for (int i = 0; i < n; i++){
+            for(int j = 0; j < i+1; j++){
+                if(counter >= n){
+                    break;
+                }
+                counter++;
+                System.out.print(ch++);
+                if(ch > 'f'){
+                    ch = 'a';
+                }
+
+            }
+            if(counter >= n){
+                break;
+            }
+            counter++;
+            System.out.print('+');
+        }
+        return;
+    }

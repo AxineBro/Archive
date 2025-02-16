@@ -1,0 +1,34 @@
+private static boolean isCorner(int i, int j, int h, int w){
+        return (i == 0 && j ==0) || (i == h-1 && j ==0) || (i == 0 && j ==w-1) || (i == h-1 && j ==w-1);
+    }
+    private static boolean isHorizontalLine(int i, int j, int h, int w){
+        return i == 0 || i == h-1 ;
+    }
+    private static boolean isVerticalLine(int i, int j, int h, int w){
+        return j ==0 || j ==w-1;
+    }
+    public static void task3(int h) {
+        for(int i = 0; i < h; i++){
+            for(int j = 0; j < h; j++){
+                if(isCorner(i, j, h, h)){
+                    System.out.print(" ");
+                }
+                else if(isHorizontalLine(i, j, h, h)){
+                    System.out.print("-");
+                }
+                else if(isVerticalLine(i, j, h, h)){
+                    System.out.print("|");
+                }
+                else{
+                    if(i == h-1-j){
+                        System.out.print("/");
+                    }
+                    else{
+                        System.out.print(" ");
+                    }
+                }
+            }
+            System.out.println();
+        }
+        return;
+    }

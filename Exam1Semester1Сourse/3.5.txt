@@ -1,0 +1,24 @@
+public static void task3(int h) {
+        int counter = 1;
+        int counterNow = 1;
+        char ch = '+';
+        for(int i = 0; i < h; i++){
+            for(int j = 0; j < i; j++){
+                System.out.print(" ");
+            }
+            for(int j = i; j < h; j++){
+                System.out.print(ch);
+                counterNow--;
+                if(counterNow == 0 && ch == '+'){
+                    counterNow=++counter;
+                    ch = '-';
+                }
+                else if(counterNow == 0 && ch == '-'){
+                    counterNow=++counter;
+                    ch = '+';
+                }
+            }
+            System.out.println();
+        }
+        return;
+    }
