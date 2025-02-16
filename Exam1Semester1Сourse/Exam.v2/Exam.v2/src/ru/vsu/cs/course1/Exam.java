@@ -39,6 +39,23 @@ public class Exam {
         return;
     }
     public static List<Integer> task9(List<Integer> list) {
-       return null;
+    	boolean previousElementIsPositive = true;
+    	boolean currentElementIsPositive = true;
+    	List<Integer> resultList = new ArrayList<Integer>();
+    	for(int num : list) {
+    		if(num < 0 && currentElementIsPositive) {
+    			currentElementIsPositive = false;
+    		} else if(num < 0 && previousElementIsPositive) {
+    			previousElementIsPositive = false;
+    		} else if(!currentElementIsPositive && !previousElementIsPositive) {
+    			resultList.add(num);
+    		}
+    		if(num >= 0) {
+    			previousElementIsPositive = true;
+    	    	currentElementIsPositive = true;
+    		}
+    		resultList.add(num);
+    	}
+    	return resultList;
     }
 }
