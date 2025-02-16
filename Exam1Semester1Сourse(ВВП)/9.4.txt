@@ -1,0 +1,15 @@
+public static List<Integer> task9(List<Integer> list) {
+    	List<Integer> result = new ArrayList<Integer>();
+    	boolean isZero = false;
+    	for(int num : list) {
+    		if(isZero && num != 0) {
+    			result.add(num);
+    		}
+    		if(num == 0 && !isZero) {
+    			isZero = true;
+    		} else if(num == 0 && isZero) {
+    			break;
+    		}
+    	}
+        return result;
+    }
