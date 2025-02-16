@@ -1,0 +1,28 @@
+public static void task1(int n) {
+    	int counter = 0;
+    	int currentCounter = 0;
+    	int countD = 1;
+    	w:while(counter < n) {
+    		char ch = 'a';
+    		for(int i = 0; i <= currentCounter; i++) {
+    			for(int j = 0; j <= ch - 'a'; j++) {
+    				System.out.print(ch);
+    				if(++counter == n) 
+    					break w;
+    				for(int k = 0; k < countD; k++) {
+    					System.out.print('-');
+    					if(++counter == n) 
+        					break w;
+    				}
+    				if(countD == 1) {
+    					countD = 2;
+    				} else {
+    					countD = 1;
+    				}
+    			}
+    			ch++;
+    		}
+    		currentCounter++;
+    	}
+        return;
+    }

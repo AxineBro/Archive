@@ -8,7 +8,7 @@ import java.util.*;
 public class Exam {
 
     public static void task1(int n) {
-       return;
+    	return;
     }
 
     public static void task2(int n) {
