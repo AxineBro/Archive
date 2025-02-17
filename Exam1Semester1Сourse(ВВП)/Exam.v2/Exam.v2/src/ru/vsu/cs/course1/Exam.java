@@ -10,15 +10,16 @@ public class Exam {
     public static void task1(int n) {
         return;
     }
-
+    
     public static void task2(int n) {
         return;
     }
-
+    
     public static void task3(int h) {
         return;
     }
 
+    
     public static void task4(int h, int w) {
         return;
     }
@@ -30,7 +31,7 @@ public class Exam {
     public static int task6(int[][] arr) {
         return -1;
     }
-
+    
     public static void task7(int[][] arr) {
         return;
     }
