@@ -1,0 +1,18 @@
+public static void swapColumns(int[][] arr, int col1, int col2) {
+        for (int i = 0; i < arr.length; i++) {
+            int temp = arr[i][col1];
+            arr[i][col1] = arr[i][col2];
+            arr[i][col2] = temp;
+        }
+    }
+    
+    public static void task7(int[][] arr) {
+        int columns = arr[0].length;
+        for (int i = 0; i < columns - 1; i++) {
+            for (int j = 0; j < columns - i - 1; j++) {
+                if (arr[1][j] > arr[1][j + 1]) {
+                    swapColumns(arr, j, j + 1);
+                }
+            }
+        }
+    }

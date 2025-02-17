@@ -1,17 +1,17 @@
-    public static int task5(int[] array) {
-        if (array.length == 0) {
+    public static int task5(int[] arr) {
+        if (arr.length == 0) {
             return -1;
         }
 
         Set<Integer> uniqueElements = new HashSet<>();
         int index = -1;
 
-        for (int i = 0; i < array.length; i++) {
-            if (uniqueElements.contains(array[i])) {
+        for (int i = 0; i < arr.length; i++) {
+            if (uniqueElements.contains(arr[i])) {
             	index = i;
                 break;
             }
-            uniqueElements.add(array[i]);
+            uniqueElements.add(arr[i]);
             index = i;
         }
 

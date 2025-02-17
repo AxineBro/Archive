@@ -1,18 +1,18 @@
-public static int countUniqueValues(int[][] matrix, int col) {
+public static int countUniqueValues(int[][] arr, int col) {
         Set<Integer> uniqueValues = new HashSet<>();
         
-        for (int row = 0; row < matrix.length; row++) {
-            uniqueValues.add(matrix[row][col]);
+        for (int row = 0; row < arr.length; row++) {
+            uniqueValues.add(arr[row][col]);
         }
         return uniqueValues.size();
     }
     
-    public static int task6(int[][] matrix) {
+    public static int task6(int[][] arr) {
         int maxUniqueCount = 0;
         int columnIndex = 0;
 
-        for (int col = 0; col < matrix[0].length; col++) {
-            int uniqueCount = countUniqueValues(matrix, col);
+        for (int col = 0; col < arr[0].length; col++) {
+            int uniqueCount = countUniqueValues(arr, col);
             if (uniqueCount > maxUniqueCount) {
                 maxUniqueCount = uniqueCount;
                 columnIndex = col;

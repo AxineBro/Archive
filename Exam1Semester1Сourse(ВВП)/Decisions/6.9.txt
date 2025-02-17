@@ -1,7 +1,7 @@
-public static int countInRows(int[][] matrix, int rowIndex, int value) {
+public static int countInRows(int[][] arr, int rowIndex, int value) {
         int count = 0;
-        for (int i = 0; i < matrix.length; i++) {
-            if (i != rowIndex && containsValue(matrix[i], value)) {
+        for (int i = 0; i < arr.length; i++) {
+            if (i != rowIndex && containsValue(arr[i], value)) {
                 count++;
                 if (count >= 2) {
                     break;

@@ -1,7 +1,7 @@
-public static int countFibonacci(int[][] matrix, int col) {
+public static int countFibonacci(int[][] arr, int col) {
         int count = 0;
-        for (int row = 0; row < matrix.length; row++) {
-            if (isFibonacci(matrix[row][col])) {
+        for (int row = 0; row < arr.length; row++) {
+            if (isFibonacci(arr[row][col])) {
                 count++;
             }
         }
@@ -15,12 +15,12 @@ public static int countFibonacci(int[][] matrix, int col) {
     public static boolean isPerfectSquare(int x) {
         return x * x == x;
     }
-    public static int task6(int[][] matrix) {
+    public static int task6(int[][] arr) {
         int maxCount = -1;
         int lastColumnIndex = -1;
 
-        for (int col = 0; col < matrix[0].length; col++) {
-            int count = countFibonacci(matrix, col);
+        for (int col = 0; col < arr[0].length; col++) {
+            int count = countFibonacci(arr, col);
             if (count >= maxCount) {
                 maxCount = count;
                 lastColumnIndex = col;
