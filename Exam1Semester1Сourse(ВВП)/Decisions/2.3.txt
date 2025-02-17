@@ -1,0 +1,31 @@
+public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i * i <= number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void task2(int n) {
+        int count = 0;
+        int primeCount = 1;
+        int number = 2;
+
+        while (primeCount < 2 * n) {
+            if (isPrime(number)) {
+                primeCount++;
+                if (primeCount % 2 == 1) {
+                    if (count > 0) {
+                        System.out.print(", ");
+                    }
+                    System.out.print(number);
+                    count++;
+                }
+            }
+            number++;
+        }
+    }
