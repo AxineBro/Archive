@@ -1,0 +1,21 @@
+public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i * i <= number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static int task5(int[] arr) {
+        int sum = 0;
+        for (int num : arr) {
+            if (isPrime(num)) {
+                sum += num;
+            }
+        }
+        return sum;
+    }

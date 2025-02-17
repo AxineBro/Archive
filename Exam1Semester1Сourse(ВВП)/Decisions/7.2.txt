@@ -1,0 +1,29 @@
+public static void task7(int[][] arr) {
+        boolean[] zeroRows = new boolean[arr.length];
+        boolean[] zeroCols = new boolean[arr[0].length];
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                if (arr[i][j] == 0) {
+                    zeroRows[i] = true;
+                    zeroCols[j] = true;
+                }
+            }
+        }
+
+
+        for (int i = 0; i < arr.length; i++) {
+            if (zeroRows[i]) {
+                for (int j = 0; j < arr[0].length; j++) {
+                	arr[i][j] = 0;
+                }
+            }
+        }
+        for (int j = 0; j < arr[0].length; j++) {
+            if (zeroCols[j]) {
+                for (int i = 0; i < arr.length; i++) {
+                	arr[i][j] = 0;
+                }
+            }
+        }
+    }
