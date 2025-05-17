@@ -1,8 +1,7 @@
 <h2>Selected "Алгоритмы и структуры данных (Algorithms and data structures)"</h2>
 Select an action
 
-[Back](../README.md)
+[Back](../E2S1C.md)
 
 ********************************************************************************
-+ [View tasks](Photo/E2S1CPhoto.md)
-+ [View solutions](Decisions/E2S1Decisions.md)
++ [Вариант 3 (Option 3)](3_ВариантАиСД.pdf)
