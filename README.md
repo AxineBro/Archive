@@ -9,3 +9,4 @@ How are the works presented?
 Exam Selection
 ********************************************************************************
 [Введение в программирование (Introduction to programming)](Exam1Semester1Сourse(ВВП)/E1S1C.md)
+[Алгоритмы и структуры данных (Algorithms and data structures)](Exam2Semester1Сourse(АиСД)/E2S1C.md)
